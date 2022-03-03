@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    font-family: 'Abel', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+body>* {
+    padding: 5% 15% 5% 15%;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: lighter;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    align-items: center;
+    border-bottom: 1px solid #828282;
+}
+
+nav>a {
+    color: #828282;
+    font-size: 18px;
+}
+
+nav>a:hover {
+    color: black;
+}
+
+nav>input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    left: -500px;
+}
+
+nav>label {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* padding: 2% 15% 5% 15%; */
+    align-items: center;
+}
+
+.home>h1 {
+    font-size: 45px;
+    font-weight: normal;
+    flex-basis: 10%;
+}
+
+.home>p {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.home>.home_radio_launge {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: space-between;
+    height: 60px;
+    align-items: flex-end;
+    position: relative;
+}
+
+.home>.home_radio_launge::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    outline: 1px black solid;
+}
+
+.home>.home_radio_launge>label {
+    color: #828282;
+    font-size: 16px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.home>.home_radio_launge>input:checked+label {
+    color: black;
+    cursor: default;
+}
+
+.home>.home_radio_launge>input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    left: -500px;
+}
+
+.home>img {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.about_me {
+    background-color: #F6F6F6;
+    /* padding: 5% 15% 10% 15%; */
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+.about_me>h2 {
+    margin-bottom: 5%;
+}
+
+.about_me>p {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.about_me>p:first-of-type {
+    margin-bottom: 5%;
+}
+
+.skills {
+    /* padding: 5% 15% 5% 15%; */
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+
+
+.skills>p {
+    font-size: 18px;
+}
+
+.skills>h2, .skills>p {
+    padding: 0 0 5% 0;
+}
+
+.skills_techno {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.skills_techno>div {
+    flex-basis: 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.skills_techno>div>img {
+    height: 80px;
+}
+
+.skills_techno>div>p {
+    font-size: 14px;
+    color: #828282
+}
+
+.skills_techno_stars {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.skills_techno_stars>li {
+    list-style: none;
+    color: black;
+    font-size: 15px;
+}
+
+.skills_techno_stars>li.grey_star {
+    color: #E5E5E5;
+}
+
+.portfolio {
+    /* padding: 5% 15% 5% 15%; */
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+
+.portfolio>p {
+    text-decoration-line: underline;
+    font-size: 18px;
+}
+
+.portfolio>img {
+    width: 100%;
+    margin: 10% 0 3% 0;
+}
+
+footer {
+    /* margin: 5% 15%; */
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+footer>* {
+    margin-top: 5%;
+}
+
+footer>p:first-of-type {
+    font-size: 18px;
+}
+
+footer>p:last-of-type {
+    font-size: 14px;
+}
+
+footer>button {
+    height: 40px;
+    width: 250px;
+    border-radius: 30px;
+    align-self: center;
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+}
+
+footer>ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+footer>ul>li {
+    margin: 1%;
+}
+
+@media (max-width: 500px) {
+    body>* {
+        padding: 5%;
+    }
+
+    .skills_techno {
+        flex-flow: column nowrap;
+    }
+
+    .skills_techno_stars {
+        margin-bottom: 30px;
+        width: 50%;
+        margin-top: 5px;
+    }
+
+    .home>.home_radio_launge {
+        display: none;
+    }
+
+    nav {
+        border: none;
+        justify-content: flex-end;
+    }
+
+    nav>a {
+        display: none;
+    }
+
+    nav>label {
+        display: block;
+    }
+
+}
